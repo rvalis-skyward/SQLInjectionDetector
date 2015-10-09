@@ -1,0 +1,27 @@
+{
+  "name": "DemoApp",
+  "version": "0.0.1",
+  "authors": [
+    "Randy Valis <twilightofthedevs@gmail.com>"
+  ],
+  "description": "Demo client for SQL Injection Detection",
+  "main": "app.js",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mithril": "~0.2.0",
+    "ramda": "~0.17.1",
+    "Materialize": "materialize#~0.97.1",
+    "velocity": "~1.2.3",
+    "jquery": "~2.1.4"
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="/bower_components/Materialize/bin/materialize.css" media="screen,projection">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <title>Demo App for SQL Injection Detection</title>
+    </head>
+    <body>
+        <div id="nav"></div>
+        <div class="container">
+            <div class="app row" id='app'></div>
+        </div>
+        <div id="sidenav-overlay"></div>
+
+        <script type="text/javascript" src="/bower_components/ramda/dist/ramda.min.js"></script>
+        <script type="text/javascript" src="/bower_components/mithril/mithril.min.js"></script>
+        <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="/bower_components/Materialize/bin/materialize.js"></script>
+        <script type="text/javascript" src="/bower_components/velocity/velocity.min.js"></script>
+        <script type="text/javascript" src="/js/components/sqlform.js"></script>
+        <script type="text/javascript" src="/js/components/page1.js"></script>
+        <script type="text/javascript" src="/js/components/nav.js"></script>
+        <script type="text/javascript" src="/js/utils.js"></script>
+        <script type="text/javascript" src="/js/app.js"></script>
+        <script type="text/javascript" src="/js/sqldetector.js"></script>
+        <script>
+            setTimeout(function(){
+                var detector = new sqldetector.SQLDetector('http://localhost:8080/api');
+            }, 1000);
+        </script>
+    </body>
+</html>

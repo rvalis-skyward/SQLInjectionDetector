@@ -1,0 +1,7 @@
+.gradle/
+
+ApiServer/build/
+ApiServer/.gradle/
+
+DemoServer/client/bower_components
+DemoServer/server/node_modules

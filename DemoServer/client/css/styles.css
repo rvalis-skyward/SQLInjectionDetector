@@ -1,0 +1,14 @@
+.hide-on-large {
+    margin: 6px;
+}
+
+#sidenav-overlay {
+    opacity: 0;
+    display: none;
+}
+
+@media only screen and (min-width: 992px) {
+    .hide-on-large {
+        display: none;
+    }
+}

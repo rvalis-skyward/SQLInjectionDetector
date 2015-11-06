@@ -8,30 +8,10 @@ import java.util.*;
 @RequestMapping( value = "/api" )
 class ApiController {
 
-    IApiService service = new ApiService();
-
-    @RequestMapping( method = RequestMethod.GET )
+    @RequestMapping( value = "/detect", method = RequestMethod.POST )
     @ResponseBody
-    public List< Model > findAll(){
-        return service.findAll();
-    }
-
-    @RequestMapping( value = "/{id}", method = RequestMethod.GET )
-    @ResponseBody
-    public Model findOne( @PathVariable( "id" ) Integer id ){
-        return service.findOne( id );
-    }
-
-    @RequestMapping( method = RequestMethod.POST )
-    @ResponseBody
-    public Integer create( @RequestBody Model model ){
-        return service.create( model );
-    }
-
-    @RequestMapping( value = "/echo", method = RequestMethod.POST )
-    @ResponseBody
-    public EchoModel echo( @RequestBody EchoModel stuff ){
-        return stuff;
+    public boolean detect_sql( @RequestBody String input ){
+        return SQLDetector.detect(input);
     }
 
 }

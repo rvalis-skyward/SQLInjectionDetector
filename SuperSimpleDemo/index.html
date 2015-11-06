@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="./sqldetector.js" charset="utf-8"></script>
+    </head>
+    <body>
+
+        <div>Type something:</div>
+        <input type="text" id='sql' />
+
+        <script type="text/javascript">
+            var input = document.getElementById('sql');
+            var detector = sqldetector.SQLDetector('http://localhost:8080/api', input, function(res){
+                if(res){
+                    alert('AH! SQL Injection detected!');
+                }
+            });
+        </script>
+    </body>
+</html>
